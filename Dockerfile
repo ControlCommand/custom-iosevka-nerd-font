@@ -3,7 +3,7 @@
 ARG BUILD_DIR=/build
 
 # Check https://github.com/be5invis/Iosevka/releases for font version
-ARG IOSEVKA_VERSION=34.2.1
+ARG IOSEVKA_VERSION=34.8.1
 
 ################################################################
 
