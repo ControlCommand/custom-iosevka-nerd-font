@@ -55,7 +55,7 @@ jobs:
 
       - name: Build font
         env:
-          IMAGE_REF: ${{ steps.image.outputs.image }}:sha-${{ steps.sha.outputs.short }}
+          IMAGE_REF: ghcr.io/controlcommand/custom-iosevka-nerd-font:sha-${{ steps.sha.outputs.short }}
         run: ./build.sh
 
       - name: Create or update latest pre-release
