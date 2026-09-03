@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate light/dark showcase SVG matrices for every configured AFIO weight.
+"""Generate light/dark showcase SVG matrices for every configured Iosveka Clinic weight.
 
 Renders PNGs inside a Docker container (debian:trixie-slim + librsvg) to ensure
 identical output across macOS, Linux, and CI.
@@ -9,7 +9,7 @@ Usage:
 
 Optional arguments:
     python3 src/generate_showcase_matrix.py --output-dir docs/imgs/generated
-    python3 src/generate_showcase_matrix.py --plan private-build-plans.toml --family afio
+    python3 src/generate_showcase_matrix.py --plan private-build-plans.toml --family iosevkasclinic
     python3 src/generate_showcase_matrix.py --png-scale 2
 
 Requires: docker
@@ -31,13 +31,13 @@ DEFAULT_PLAN = ROOT / "private-build-plans.toml"
 DEFAULT_TEMPLATE_DIR = ROOT / "docs" / "imgs"
 DEFAULT_OUTPUT_DIR = DEFAULT_TEMPLATE_DIR / "generated"
 
-TEMPLATE = DEFAULT_TEMPLATE_DIR / "afio-showcase.svg"
+TEMPLATE = DEFAULT_TEMPLATE_DIR / "iosevkasclinic-showcase.svg"
 DOCKER_IMAGE = "debian:trixie-slim"
 
 THEMES: dict[str, dict[str, str]] = {
     "dark": {
-        "TITLE": "AFIO dark theme showcase",
-        "DESC": "Dark theme code showcase for JSON, Python, and Rust using the AFIO font.",
+        "TITLE": "IOSEVKASCLINIC dark theme showcase",
+        "DESC": "Dark theme code showcase for JSON, Python, and Rust using the IOSEVKASCLINIC font.",
         "BG": "#23272c",
         "SEP": "#363a3e",
         "PANE_TITLE": "#808080",
@@ -54,8 +54,8 @@ THEMES: dict[str, dict[str, str]] = {
         "FIELD": "#a9b7c6",
     },
     "light": {
-        "TITLE": "AFIO light theme showcase",
-        "DESC": "Light theme code showcase for JSON, Python, and Rust using the AFIO font.",
+        "TITLE": "IOSEVKASCLINIC light theme showcase",
+        "DESC": "Light theme code showcase for JSON, Python, and Rust using the IOSEVKASCLINIC font.",
         "BG": "#ffffff",
         "SEP": "#e3e3e3",
         "PANE_TITLE": "#6a737d",
@@ -82,7 +82,7 @@ class WeightSpec:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate light/dark AFIO showcase SVGs for all configured font weights."
+        description="Generate light/dark IOSEVKASCLINIC showcase SVGs for all configured font weights."
     )
     parser.add_argument(
         "--font-dir",
@@ -104,8 +104,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--family",
-        default="afio",
-        help="Build plan family to read from [buildPlans.<family>]. Default: afio",
+        default="iosevkasclinic",
+        help="Build plan family to read from [buildPlans.<family>]. Default: iosevkasclinic",
     )
     parser.add_argument(
         "--png-scale",
@@ -211,8 +211,8 @@ def generate_showcase_matrix(
         themed = apply_theme(template, theme_colors)
         for weight in weights:
             patched = patch_weight(themed, weight.css)
-            svg_path = output_dir / f"afio-showcase-{theme_name}-{weight.css}.svg"
-            png_path = output_dir / f"afio-showcase-{theme_name}-{weight.css}.png"
+            svg_path = output_dir / f"iosevkasclinic-showcase-{theme_name}-{weight.css}.svg"
+            png_path = output_dir / f"iosevkasclinic-showcase-{theme_name}-{weight.css}.png"
             svg_path.write_text(patched, encoding="utf-8")
             svg_paths.append(svg_path)
             generated.extend([svg_path, png_path])
