@@ -5,7 +5,7 @@ set -e
 export DOCKER_BUILDKIT=1
 
 BUILD_DIR=/build
-FONT_NAME=${FONT_NAME:-afio}
+FONT_NAME=${FONT_NAME:-iosevkasclinic}
 BUILD_PLAN=${BUILD_PLAN:-private-build-plans.toml}
 OUTPUT_DIR=$(pwd)/_output
 IMAGE=${IMAGE:-ghcr.io/awnion/custom-iosevka-nerd-font}
