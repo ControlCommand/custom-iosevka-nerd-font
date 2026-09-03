@@ -1,106 +1,239 @@
-[buildPlans.afio]
-family = "afio"
-spacing = "term"
+[buildPlans.IosevkasClinic]
+family = "Iosevkas Clinic"
+spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-[buildPlans.afio.variants.design]
-f = "flat-hook-serifless-crossbar-at-x-height"
-i = "serifed-asymmetric"
-l = "serifed-semi-tailed"
-m = "short-leg-serifless"
-zero = "dotted"
+[buildPlans.IosevkasClinic.variants.design]
+one = "base"
+two = "curly-neck-serifless"
+three = "two-arcs"
+four = "closed-serifless"
+five = "upright-arched-serifless"
+six = "open-contour"
+seven = "straight-serifless-crossbar"
+eight = "crossing-asymmetric"
 nine = "open-contour"
-asterisk = "hex-low"
-percent = "dots"
-tittle = "square"
-at = "fourfold-solid-inner-tall"
-cyrl-em = "hanging-serifless"
+zero = "oval-tall-slashed"
+capital-b = "standard-serifless"
+capital-c = "serifless"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-corner-serifless-hooked"
+capital-i = "short-serifed"
+capital-j = "flat-hook-serifed"
+capital-m = "hanging-serifless"
+capital-p = "open-serifless"
+capital-q = "crossing"
+capital-r = "straight-serifless"
+capital-s = "serifless"
+capital-u = "toothless-rounded-serifless"
+capital-v = "straight-serifless"
+a = "single-storey-earless-rounded-serifed"
+b = "toothless-rounded-serifless"
+d = "toothless-rounded-serifless"
+e = "flat-crossbar"
+g = "single-storey-flat-hook-earless-rounded"
+i = "serifless"
+j = "serifed"
+l = "serifed-semi-tailed"
+m = "flat-top-serifless"
+n = "flat-top-straight-serifless"
+p = "earless-rounded-serifless"
+q = "earless-rounded-straight-serifless"
+r = "compact-serifless"
+t = "flat-hook-short-neck"
+u = "flat-bottom-serifless"
+eszet = "sulzbacher-tailed-serifless"
+lower-theta = "oval"
+lower-iota = "semi-tailed"
+lower-lambda = "tailed-turn"
+lower-tau = "flat-tailed"
+lower-chi = "chancery-above-baseline"
+cyrl-capital-zhe = "curly"
+cyrl-zhe = "curly"
+cyrl-er = "earless-rounded-serifless"
+cyrl-yeri = "round"
+cyrl-yery = "round-tailed"
+punctuation-dot = "round"
+ascii-grave = "raised-inverse-comma"
+ascii-single-quote = "raised-comma"
+paren = "large-contour"
+brace = "straight"
+at = "compact"
+percent = "rings-continuous-slash"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
 
-[buildPlans.afio.slopes.Upright]
+[buildPlans.IosevkasClinic.variants.italic]
+one = "base"
+two = "curly-neck-serifless"
+three = "two-arcs"
+four = "closed-serifless"
+five = "upright-arched-serifless"
+six = "open-contour"
+seven = "straight-serifless-crossbar"
+eight = "crossing-asymmetric"
+nine = "open-contour"
+zero = "oval-tall-slashed"
+capital-b = "standard-serifless"
+capital-c = "serifless"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-corner-serifless-hooked"
+capital-i = "short-serifed"
+capital-j = "flat-hook-serifed"
+capital-m = "hanging-serifless"
+capital-p = "open-serifless"
+capital-q = "crossing"
+capital-r = "straight-serifless"
+capital-s = "serifless"
+capital-u = "toothless-rounded-serifless"
+capital-v = "straight-serifless"
+a = "single-storey-earless-rounded-serifed"
+b = "toothless-rounded-serifless"
+d = "toothless-rounded-serifless"
+e = "flat-crossbar"
+g = "single-storey-flat-hook-earless-rounded"
+i = "serifless"
+j = "serifed"
+l = "serifed-semi-tailed"
+m = "flat-top-serifless"
+n = "flat-top-straight-serifless"
+p = "earless-rounded-serifless"
+q = "earless-rounded-straight-serifless"
+r = "compact-serifless"
+t = "flat-hook-short-neck"
+u = "flat-bottom-serifless"
+eszet = "sulzbacher-tailed-serifless"
+lower-theta = "oval"
+lower-iota = "semi-tailed"
+lower-lambda = "tailed-turn"
+lower-tau = "flat-tailed"
+lower-chi = "chancery-above-baseline"
+cyrl-capital-zhe = "curly"
+cyrl-zhe = "curly"
+cyrl-er = "earless-rounded-serifless"
+cyrl-yeri = "round"
+cyrl-yery = "round-tailed"
+punctuation-dot = "round"
+ascii-grave = "raised-inverse-comma"
+ascii-single-quote = "raised-comma"
+paren = "large-contour"
+brace = "straight"
+at = "compact"
+percent = "rings-continuous-slash"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+
+[buildPlans.IosevkasClinic.variants.oblique]
+one = "base"
+two = "curly-neck-serifless"
+three = "two-arcs"
+four = "closed-serifless"
+five = "upright-arched-serifless"
+six = "open-contour"
+seven = "straight-serifless-crossbar"
+eight = "crossing-asymmetric"
+nine = "open-contour"
+zero = "oval-tall-slashed"
+capital-b = "standard-serifless"
+capital-c = "serifless"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-corner-serifless-hooked"
+capital-i = "short-serifed"
+capital-j = "flat-hook-serifed"
+capital-m = "hanging-serifless"
+capital-p = "open-serifless"
+capital-q = "crossing"
+capital-r = "straight-serifless"
+capital-s = "serifless"
+capital-u = "toothless-rounded-serifless"
+capital-v = "straight-serifless"
+a = "single-storey-earless-rounded-serifed"
+b = "toothless-rounded-serifless"
+d = "toothless-rounded-serifless"
+e = "flat-crossbar"
+g = "single-storey-flat-hook-earless-rounded"
+i = "serifless"
+j = "serifed"
+l = "serifed-semi-tailed"
+m = "flat-top-serifless"
+n = "flat-top-straight-serifless"
+p = "earless-rounded-serifless"
+q = "earless-rounded-straight-serifless"
+r = "compact-serifless"
+t = "flat-hook-short-neck"
+u = "flat-bottom-serifless"
+eszet = "sulzbacher-tailed-serifless"
+lower-theta = "oval"
+lower-iota = "semi-tailed"
+lower-lambda = "tailed-turn"
+lower-tau = "flat-tailed"
+lower-chi = "chancery-above-baseline"
+cyrl-capital-zhe = "curly"
+cyrl-zhe = "curly"
+cyrl-er = "earless-rounded-serifless"
+cyrl-yeri = "round"
+cyrl-yery = "round-tailed"
+punctuation-dot = "round"
+ascii-grave = "raised-inverse-comma"
+ascii-single-quote = "raised-comma"
+paren = "large-contour"
+brace = "straight"
+at = "compact"
+percent = "rings-continuous-slash"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+
+  [buildPlans.IosevkasClinic.ligations]
+  inherits = "dlig"
+
+[buildPlans.IosevkasClinic.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.IosevkasClinic.widths.Extended]
+shape = 600
+menu = 7
+css = "expanded"
+
+[buildPlans.IosevkasClinic.widths.Condensed]
+shape = 416
+menu = 3
+css = "condensed"
+
+[buildPlans.IosevkasClinic.widths.SemiCondensed]
+shape = 456
+menu = 4
+css = "semi-condensed"
+
+[buildPlans.IosevkasClinic.widths.SemiExtended]
+shape = 548
+menu = 6
+css = "semi-expanded"
+
+[buildPlans.IosevkasClinic.widths.ExtraExtended]
+shape = 658
+menu = 8
+css = "extra-expanded"
+
+[buildPlans.IosevkasClinic.widths.UltraExtended]
+shape = 720
+menu = 9
+css = "ultra-expanded"
+
+[buildPlans.IosevkasClinic.slopes.Upright]
 angle = 0
 shape = "upright"
 menu = "upright"
 css = "normal"
 
-# [buildPlans.afio.slopes.oblique]
-# angle = 9.4
-# shape = "oblique"
-# menu = "oblique"
-# css = "oblique"
-
-###################################################################################################
-# Override default building weights
-# When buildPlans.<plan name>.weights is absent, all weights would built and mapped to
-# default values.
-# IMPORTANT : Currently "menu" and "css" property only support numbers between 0 and 1000.
-#             and "shape" properly only supports number between 100 and 900 (inclusive).
-#             If you decide to use custom weights you have to define all the weights you
-#             plan to use otherwise they will not be built.
-[buildPlans.afio.weights.light]
-shape = 200
-menu  = 300
-css   = 300
-
-[buildPlans.afio.weights.regular]
-shape = 300
-menu  = 400
-css   = 400
-
-[buildPlans.afio.weights.medium]
-shape = 400
-menu  = 500
-css   = 500
-
-[buildPlans.afio.weights.bold]
-shape = 500
-menu  = 700
-css   = 700
-
-# End weight section
-###################################################################################################
-
-###################################################################################################
-# Override default building slant sets
-# Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
-# When this section is absent, all slants would be built.
-
-[buildPlans.afio.slants]
-upright = "normal"
-# italic = "italic"
-# oblique = "oblique"
-
-# End slant section
-###################################################################################################
-
-###################################################################################################
-# Override default building widths
-# When buildPlans.<plan name>.widths is absent, all widths would built and mapped to
-# default values.
-# IMPORTANT : Currently "shape" property only supports integers between 3 and 9 (inclusive), while
-#             "menu" only supports integers between 1 and 9 (inclusive).
-#             If you decide to use custom widths you have to define all the widths you
-#             plan to use otherwise they will not be built.
-
-[buildPlans.afio.widths.normal]
-shape = 540        # Width grade of glyph shapes. NOT actual character width.
-menu  = 5          # Width grade for the font's names. NOT actual character width.
-css   = "normal"   # "font-stretch' property of webfont CSS.
-
-###################################################################################################
-# Metric overrides
-# Certain metrics like line height (leading) could be overridden in your build plan file.
-# Edit the values to change the metrics. Remove this section when overriding is not needed.
-
-# [buildPlans.afio.metric-override]
-# leading = 1250
-# winMetricAscenderPad = 0
-# winMetricDescenderPad = 0
-# powerlineScaleY = 1
-# powerlineScaleX = 1
-# powerlineShiftY = 0
-# powerlineShiftX = 0
-
-# End metric override section
-###################################################################################################
+[buildPlans.IosevkasClinic.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
