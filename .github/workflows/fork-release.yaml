@@ -15,7 +15,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  FONT_NAME: afio
+  FONT_NAME: iosevkasclinic
 
 jobs:
   build:
