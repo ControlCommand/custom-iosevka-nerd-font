@@ -3,7 +3,7 @@ set -euo pipefail
 
 REPO="awnion/custom-iosevka-nerd-font"
 TAP_REPO="awnion/homebrew-tap"
-FONT_NAME="afio"
+FONT_NAME="iosevkasclinic"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 VERSION=$(cat "$SCRIPT_DIR/../VERSION" | tr -d '[:space:]')
@@ -35,10 +35,10 @@ mkdir -p "$TMPDIR/homebrew-tap/Casks"
 sed \
   -e "s/@@VERSION@@/${VERSION}/" \
   -e "s/@@SHA256@@/${SHA256}/" \
-  "$SCRIPT_DIR/font-afio.template.rb" > "$TMPDIR/homebrew-tap/Casks/font-afio.rb"
+  "$SCRIPT_DIR/font-iosevkasclinic.template.rb" > "$TMPDIR/homebrew-tap/Casks/font-iosevkasclinic.rb"
 
 cd "$TMPDIR/homebrew-tap"
-git add Casks/font-afio.rb
+git add Casks/font-iosevkasclinic.rb
 git commit -m "${FONT_NAME} ${VERSION}"
 git push origin main
 
