@@ -15,7 +15,6 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: ghcr.io/${{ github.repository }}
   FONT_NAME: afio
 
 jobs:
@@ -36,10 +35,15 @@ jobs:
       - id: sha
         run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
 
+      - id: image
+        shell: bash
+        run: |
+          echo "image=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+
       - id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.IMAGE }}
+          images: ${{ steps.image.outputs.image }}
           tags: |
             type=raw,value=sha-${{ steps.sha.outputs.short }}
 
@@ -53,7 +57,7 @@ jobs:
 
       - name: Build font
         env:
-          IMAGE_REF: ${{ env.IMAGE }}:sha-${{ steps.sha.outputs.short }}
+          IMAGE_REF: ${{ steps.image.outputs.image }}:sha-${{ steps.sha.outputs.short }}
         run: ./build.sh
 
       - name: Create or update latest pre-release
