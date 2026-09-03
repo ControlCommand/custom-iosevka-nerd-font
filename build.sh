@@ -9,7 +9,7 @@ FONT_NAME=${FONT_NAME:-afio}
 BUILD_PLAN=${BUILD_PLAN:-private-build-plans.toml}
 OUTPUT_DIR=$(pwd)/_output
 IMAGE=${IMAGE:-ghcr.io/awnion/custom-iosevka-nerd-font}
-IMAGE_REF=${IMAGE_REF:-}
+IMAGE=$(echo "$IMAGE" | tr '[:upper:]' '[:lower:]')
 VERDA_CACHE=${VERDA_CACHE:-}
 
 rm -rf "$OUTPUT_DIR"
