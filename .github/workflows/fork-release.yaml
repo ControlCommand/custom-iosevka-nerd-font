@@ -15,7 +15,8 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_TEMP: ghcr.io/${{ github.repository }}
+  IMAGE: ghcr.io/${{ github.repository }}
+  FONT_NAME: afio
 
 jobs:
   build:
@@ -23,9 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      
-      - id: image
-        run: echo "image=$(echo '${{ env.IMAGE_TEMP }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
 
       - uses: docker/setup-buildx-action@v4
 
@@ -41,7 +39,7 @@ jobs:
       - id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ steps.image.outputs.image }}
+          images: ${{ env.IMAGE }}
           tags: |
             type=raw,value=sha-${{ steps.sha.outputs.short }}
 
@@ -55,7 +53,7 @@ jobs:
 
       - name: Build font
         env:
-          IMAGE_REF: ghcr.io/controlcommand/custom-iosevka-nerd-font:sha-${{ steps.sha.outputs.short }}
+          IMAGE_REF: ${{ env.IMAGE }}:sha-${{ steps.sha.outputs.short }}
         run: ./build.sh
 
       - name: Create or update latest pre-release
